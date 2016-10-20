@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+		<meta charset="UTF-8">
+
+		<title>asdf2</title>
+
+</head>
+
+<body>
+	<div id="app">
+		<form>
+			Username : <br> <input type = "text" name = "uname"><br>
+			Password : <br> <input type = "password" name = "passwd"><br>
+			<input type="submit">Login</input>	
+
+			<!--<span class ="error" v-if = "!message">
+				you must enter a message
+			</span> 
+
+			<textarea v-model = "message">
+			</textarea>
+
+			<button type="submit">
+				send message
+			</button>-->
+		</form>
+
+		<pre>{{ $data | json}}</pre>
+	</div>
+
+
+	<script src="/index.js"></script>
+	<!--start vue-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+
+	<script>
+		new Vue({
+			el : '#app',
+
+			data : {
+				message : ''
+			}
+		})
+	</script>
+</body>
+
+</html>
