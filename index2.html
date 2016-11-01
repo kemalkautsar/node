@@ -1,0 +1,55 @@
+<body>
+
+<div id="vue-instance">
+  <div v-if="isLoggedIn">
+    Welcome to coligo!
+    <button @click="login" type="submit">Logout</button>
+  </div>
+  <div v-else>
+    <input type="text" name = "username" placeholder="username">
+    <input type="password" name "password" placeholder="password">
+    <button @click="login" type="submit">Login</button>
+  </div>
+</div>
+
+<script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
+
+<script type="text/javascript">
+/*    var uname = document.getElementByName("username");
+    var passwd = document.getElementByName("password");
+    if (uname=='admin' && passwd = 'admin'){
+      this.isLoggedIn = true;
+    }
+    else{
+      this.isLoggedIn = false;
+    }*/
+</script>
+
+<script>
+  var vm = new Vue({
+    el: '#vue-instance',
+    data: {
+      isLoggedIn: false
+    },
+    methods:{
+      
+      /*login: function(){
+        // 'this' refers to the vm instance
+        this.isLoggedIn = !this.isLoggedIn;
+      }*/
+      
+      login: function(){
+        var uname = document.getElementByName("username");
+        var passwd = document.getElementByName("password");
+        if (uname=='admin' && passwd = 'admin'){
+          this.isLoggedIn = !this.isLoggedIn;
+        }
+        else{
+          return 0;
+        }
+      }
+    }
+  });
+</script>
+
+</body>
